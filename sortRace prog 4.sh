@@ -1,0 +1,11 @@
+./generate 1000000 100000 999999
+time sort numbers.txt > sorted.txt
+./verifySort sorted.txt
+time ./mySortA numbers.txt  sortedA.txt
+./verifySort sortedA.txt
+time ./mySortV numbers.txt  sortedV.txt
+./verifySort sortedV.txt
+echo "Starting Pthread quick sort with items and eight thread"
+time ./mySort numbers.txt > sortedQ.txt
+echo "Ending Pthread quick sort"
+./verifySort sortedQ.txt
